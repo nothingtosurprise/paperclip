@@ -13,6 +13,7 @@ const mockIssuesApi = vi.hoisted(() => ({
   listAcceptedPlanDecompositions: vi.fn(),
   listComments: vi.fn(),
   listAttachments: vi.fn(),
+  listWorkProducts: vi.fn(),
   listFeedbackVotes: vi.fn(),
   markRead: vi.fn(),
   update: vi.fn(),
@@ -801,6 +802,7 @@ describe("IssueDetail", () => {
     mockIssuesApi.list.mockResolvedValue([]);
     mockIssuesApi.listComments.mockResolvedValue([]);
     mockIssuesApi.listAttachments.mockResolvedValue([]);
+    mockIssuesApi.listWorkProducts.mockResolvedValue([]);
     mockIssuesApi.listFeedbackVotes.mockResolvedValue([]);
     mockIssuesApi.markRead.mockResolvedValue({ id: "issue-1", lastReadAt: new Date().toISOString() });
     mockIssuesApi.getTreeControlState.mockResolvedValue({ activePauseHold: null });
